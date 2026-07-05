@@ -4,6 +4,8 @@ Bowlbase adalah platform e-commerce modern yang menyediakan bahan-bahan salad pr
 
 ---
 
+![Tampilan Web](img/mockup.png)
+
 ## 🔗 Tautan Repositori (Multi-Repo Architecture)
 Untuk menjaga kebersihan kode dan kemudahan *deployment*, proyek ini dibagi menjadi dua bagian:
 *   **Repository Front-end (Repository Ini):** [https://github.com/Fairuz-bit/Bowlbase](https://github.com/Fairuz-bit/Bowlbase)
