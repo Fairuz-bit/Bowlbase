@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+
+  <!-- Link to Css-->
+  <link rel="stylesheet" href="index.css">
+
+  <!-- Link Box Icons-->
+  <link rel="stylesheet" href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css">
+  
+</head>
+<body>
+  <!--Navbar-->
+  <header>
+    <!-- left-navbar -->
+    <div class="left-navbar">
+      <i class="bx bx-broccoli"></i>
+      <a href="#" class="logo-name">Bowlbase</a>
+    </div>  
+
+    <!-- center-navbar and buttom -->
+    <ul class="center-navbar">
+      <li>
+        <a href="#" class="Home-menu">
+          <i class="bx bx-home"></i>
+          Home
+        </a>
+      </li>
+      <li>
+        <a href="#" class="Product-menu">
+          <i class="bx bx-store-alt"></i>
+          Product
+        </a>
+      </li>
+      <li>
+        <a href="#" class="Discount-menu">
+          <i class="bx bx-purchase-tag"></i> 
+          Discount
+        </a>
+      </li>
+      <li>
+        <a href="#" class="Cart-menu">
+          <i class="bx bx-cart"></i>
+          Cart
+        </a>
+      </li>
+      <li>
+        <a href="#" class="Profile-menu">
+          <i class="bx bx-user"></i>
+          Profile
+        </a>
+      </li>
+    </ul>
+
+    <!-- right-navbar -->
+    <div class="right-navbar">
+      <div class="profile">
+        <img src="img/profile.png" alt="profile" class="profile-image">
+        <span class="profile-name">Abdus Rahman</span>
+        <i class="bx bx-chevron-down"></i>
+      </div>
+ 
+    </div>
+  </header>
+
+  <!-- Hero-Section -->
+  <div class="hero-page">
+    <div class="slider-wrapper" id="sliderWrapper">
+      <!-- Slide 1 -->
+      <div class="slider-slide">
+        <div class="hero-text">
+          <span class="hero-subtitle">We Are Delicacy</span>
+          <h2>Choose delicacy</h2>
+          <h3>the best healthy chicken salad</h3>
+          <p>
+            Fresh ingredients, delicious taste, and healthy nutrition for your daily diet.
+          </p>
+          <button class="cta-buttons">Shop Now <i class="bx bx-right-arrow-alt"></i></button>
+        </div>
+
+        <div class="hero-image">
+          <img src="img/home1.png" alt="home1" class="hero-image1">
+        </div>
+      </div>
+
+      <!-- Slide 2 -->
+      <div class="slider-slide">
+        <div class="hero-text">
+          <span class="hero-subtitle">Fresh & Organic</span>
+          <h2>Craft Your Perfect Salad</h2>
+          <h3>with Premium Ingredients</h3>
+          <p>
+            Directly from farm to your bowl. Packed with nutrients and crispy freshness.
+          </p>
+          <button class="cta-buttons">Shop Ingredients <i class="bx bx-right-arrow-alt"></i></button>
+        </div>
+
+        <div class="hero-image">
+          <img src="img/home2.png" alt="home2" class="hero-image2">
+        </div>
+      </div>
+
+      <!-- Slide 3 -->
+      <div class="slider-slide">
+        <div class="hero-text">
+          <span class="hero-subtitle">Nutritious Meals</span>
+          <h2>Delicious Healthy Salads</h2>
+          <h3>for Your Body & Soul</h3>
+          <p>
+            Boost your immunity and energy levels with our colorful organic selection.
+          </p>
+          <button class="cta-buttons">Order Now <i class="bx bx-right-arrow-alt"></i></button>
+        </div>
+
+        <div class="hero-image">
+          <img src="img/home3.png" alt="home3" class="hero-image3">
+        </div>
+      </div>
+    </div>
+
+    <!-- Arrow-Icons -->
+    <button class="nav-button btn-prev" onclick="prevSlide()">&#10094;</button>
+    <button class="nav-button btn-next" onclick="nextSlide()">&#10095;</button>
+  </div>
+  
+  <script src="script.js"></script>
+
+
+</body>
+</html>

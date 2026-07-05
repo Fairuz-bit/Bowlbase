@@ -1,0 +1,433 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800&display=swap');
+
+*{
+ font-family: 'Poppins',sans-serif;
+ margin: 0;
+ padding: 0;
+ box-sizing: border-box;
+ list-style: none;
+ text-decoration: none;
+ scroll-padding-top: 2rem;
+ scroll-behavior: smooth;
+}
+
+:root {
+ /* Warna Utama (Hijau Segar & Oranye Dinamis) */
+ --green-color: #3cb815;        
+ --green-light: #eaf8e6;        
+ --orange-color: #ff7e00;       
+ --orange-light: #fff5ec;      
+
+ /* Warna Teks (Gelap tapi lembut di mata) */
+ --text-color: #1a2428;         
+ --text-muted: #64748b;        
+
+ /* Warna Background & Elemen Kontainer */
+ --bg-color: #ffffff;           
+ --bg-navbar: #ffffff;          
+ --bg-bottom-nav: #fff5ec;     
+ 
+ /* Tambahan: Warna Border & Bayangan */
+ --border-color: #e2e8f0;       /* Abu-abu tipis untuk garis pembatas */
+ --shadow-color: rgba(26, 36, 40, 0.06); /* Bayangan halus menggunakan basis warna teks gelapmu */
+}
+
+
+img{
+ width: 100%;
+}
+
+body{
+ color: var(--text-color);
+ height: 1000px;
+}
+
+header{
+ background-color: var(--bg-color);
+ position: fixed;
+ width: 100%;
+ top: 0;
+ right: 0;
+ z-index: 1000;
+ display: flex;
+ justify-content: space-between;
+ align-items: center;
+ box-shadow: 0 8px 15px rgb(14 5 54 / 20%);
+ padding: 15px 20px;
+ transition: 0.5s;
+ border-radius: 0 0 20px 20px;
+
+}
+
+.left-navbar{
+ display: flex;
+ align-items: center;
+ gap: 2px;
+}
+
+.left-navbar a {
+ color: var(--orange-color);
+ font-size: medium;
+ font-weight: bold;
+ cursor: pointer;
+}
+
+.bx-broccoli{
+ color: var(--green-color);
+ font-size: 25px;
+ cursor: pointer;
+}
+
+.center-navbar{
+ display: flex;
+ position: fixed;
+ bottom: 10px;
+ left: 0;
+ width: 100%;
+ height: 70px;
+ background-color: var(--bg-color);
+ box-shadow: 0 -4px 30px rgb(0 0 0 / 20%);
+ justify-content: space-between;
+ align-items: center;
+ z-index: 1000;
+ border-radius: 50px;
+}
+
+.center-navbar a{
+ color: var(--text-color);
+ display: flex;
+ flex-direction: column;
+ justify-content: center;
+ align-items: center;
+ width: 70px;
+ height: 80px;
+ padding: 0 20px;
+ border-radius: 30px;
+}
+
+
+.center-navbar a i {
+ font-size: 24px;
+ margin-bottom: 5px;
+}
+
+.center-navbar a:hover{
+ background-color: var(--orange-color);
+ color: var(--bg-navbar);
+}
+
+.center-navbar .Home-menu {
+ font-weight: bold;
+ color: var(--orange-color);
+}
+
+.center-navbar .Profile-menu a{
+ border-radius:0 60px 60px 0;
+}
+
+.right-navbar{ 
+ display: flex;
+ justify-content: center;
+}
+
+.profile {
+ display: flex;
+ justify-content: center;
+ align-items: center;
+ gap: 10px;
+}
+
+.profile-image{
+ width: 30px;
+ height: 30px;
+ border-radius: 50%;
+}
+
+.profile-name,
+.profile .bx-chevron-down{
+ font-size: small;
+ display: none;
+}
+
+
+/* Hero-Section */
+.hero-page {
+  margin-top: 70px;
+  width: 100%;
+  height: 280px; /* Responsive default on mobile */
+  background-image: url('img/background.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-color: #fcfcfc;
+  position: relative;
+  overflow: hidden;
+}
+
+.slider-wrapper {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  transition: transform 0.5s ease-in-out;
+}
+
+.slider-slide {
+  flex: 0 0 100%;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 40px; /* compact padding on mobile */
+  gap: 5px;
+}
+
+.hero-text {
+  flex: 1.2;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  z-index: 2;
+  max-width: 60%;
+}
+
+.hero-subtitle {
+  color: var(--green-color);
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 6px;
+  display: block;
+}
+
+.hero-text h2 {
+  font-size: 24px;
+  font-weight: 800;
+  color: var(--text-color);
+  line-height: 1.2;
+  margin-bottom: 4px;
+}
+
+.hero-text h3 {
+  font-size: 19px;
+  font-weight: 700;
+  color: var(--text-color);
+  margin-bottom: 8px;
+}
+
+.hero-text p {
+  font-size: 12px;
+  color: var(--text-muted);
+  margin-bottom: 15px;
+  line-height: 1.4;
+}
+
+.cta-buttons {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  background-color: var(--green-color);
+  color: #fff;
+  padding: 8px 18px;
+  border-radius: 50px;
+  font-weight: 600;
+  font-size: 12px;
+  border: none;
+  cursor: pointer;
+  width: max-content;
+  height: auto;
+  transition: background-color 0.3s, transform 0.2s, box-shadow 0.2s;
+  box-shadow: 0 4px 10px rgba(60, 184, 21, 0.15);
+}
+
+.cta-buttons:hover {
+  background-color: #33a110;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 12px rgba(60, 184, 21, 0.25);
+}
+
+.cta-buttons i {
+  background-color: #fff;
+  color: var(--green-color);
+  border-radius: 50%;
+  padding: 2px;
+  font-size: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.2s;
+}
+
+.cta-buttons:hover i {
+  transform: translateX(2px);
+}
+
+.hero-image {
+  flex: 0.8;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.hero-image img {
+  height: 100%;
+  width: auto;
+  max-width: 100%;
+  object-fit: contain;
+  object-position: center;
+
+}
+
+.nav-button {
+  border: none;
+  background-color: transparent;
+  font-size: 32px;
+  color: var(--green-color);
+  cursor: pointer;
+  z-index: 10;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  transition: opacity 0.3s, transform 0.2s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.nav-button:hover {
+  opacity: 0.7;
+  transform: translateY(-50%) scale(1.1);
+}
+
+.btn-prev {
+  left: 10px;
+}
+
+.btn-next {
+  right: 10px;
+}
+@media screen and (min-width: 500px) {
+  
+  /* 1. Atur header sebagai container utama agar membagi ruang dengan adil */
+  header {
+    display: flex;
+    justify-content: space-between; /* Logo kiri, menu tengah, profil kanan */
+    align-items: center;
+    padding: 15px 20px;
+    gap: 10px;
+  }
+
+  /* 2. Jinakkan menu tengah agar tidak serakah mengambil ruang */
+  .center-navbar {
+    position: static;
+    width: auto;
+    height: auto;
+    background-color: transparent;
+    box-shadow: none;
+    border-radius: 0;
+    display: flex;
+    justify-content: center;
+    gap: 8px;                     /* Perkecil jarak antar menu agar menghemat tempat */
+    flex: 0 1 auto;               /* Kunci: menu tidak akan memaksa melebar */
+  }
+
+  /* 3. Perkecil sedikit ukuran text menu khusus di ukuran tanggung ini */
+  .center-navbar a {
+    flex-direction: row;
+    font-size: 13px;              /* Sedikit lebih kecil agar space aman */
+    font-weight: 500;
+    padding: 6px 8px;             /* Padding dipersempit biar muat */
+    width: auto;
+    height: auto;
+  }
+
+  /* Tetap sembunyikan ikon menu */
+  .center-navbar a i {
+    display: none;
+  }
+
+  .center-navbar a.Profile-menu {
+   display: none;
+  }
+
+  /* 4. Amankan posisi profile di kanan */
+  .right-navbar {
+    display: flex;
+    justify-content: flex-end;
+    flex: 0 0 auto;               /* Kunci: profil gak bakal ketendang keluar layar */
+  }
+
+  .profile {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+  }
+
+  /* MUNCULKAN KEMBALI NAMA PROFIL */
+  .profile-name,
+  .profile .bx-chevron-down {
+    display: inline-block;        
+    font-size: 12px;              /* Ukuran pas untuk layar 540px */
+    white-space: nowrap;          /* Paksa nama agar tidak patah jadi 2 baris */
+  }
+
+  .profile-image {
+    width: 28px;                  
+    height: 28px;
+  }
+}
+
+/* Desktop styles for hero and navigation */
+@media screen and (min-width: 768px) {
+  .hero-page {
+    height: 480px; /* Taller on desktop to match template */
+  }
+  .slider-slide {
+    padding: 0 8%;
+    gap: 10px;
+  }
+  .hero-subtitle {
+    font-size: 14px;
+    letter-spacing: 1.5px;
+    margin-bottom: 12px;
+  }
+  .hero-text h2 {
+    font-size: 40px;
+    margin-bottom: 8px;
+  }
+  .hero-text h3 {
+    font-size: 32px;
+    margin-bottom: 15px;
+  }
+  .hero-text p {
+    font-size: 15px;
+    margin-bottom: 25px;
+  }
+  .cta-buttons {
+    padding: 12px 28px;
+    font-size: 14px;
+    gap: 8px;
+  }
+  .cta-buttons i {
+    padding: 3px;
+    font-size: 14px;
+  }
+  .btn-prev {
+    left: 25px;
+  }
+  .btn-next {
+    right: 25px;
+  }
+  .center-navbar .Home-menu {
+    background-color: var(--green-color);
+    color: #ffffff !important;
+    border-radius: 50px;
+    padding: 6px 16px;
+    font-weight: 600;
+  }
+}
