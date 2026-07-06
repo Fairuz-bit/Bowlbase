@@ -1,152 +1,152 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800&display=swap');
 
 *{
- font-family: 'Poppins',sans-serif;
- margin: 0;
- padding: 0;
- box-sizing: border-box;
- list-style: none;
- text-decoration: none;
- scroll-padding-top: 2rem;
- scroll-behavior: smooth;
+  font-family: 'Poppins',sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  list-style: none;
+  text-decoration: none;
+  scroll-padding-top: 2rem;
+  scroll-behavior: smooth;
 }
 
 :root {
- /* Warna Utama (Hijau Segar & Oranye Dinamis) */
- --green-color: #3cb815;        
- --green-light: #eaf8e6;        
- --orange-color: #ff7e00;       
- --orange-light: #fff5ec;      
+  /* Warna Utama (Hijau Segar & Oranye Dinamis) */
+  --green-color: #3cb815;        
+  --green-light: #eaf8e6;        
+  --orange-color: #ff7e00;       
+  --orange-light: #fff5ec;      
 
- /* Warna Teks (Gelap tapi lembut di mata) */
- --text-color: #1a2428;         
- --text-muted: #64748b;        
+  /* Warna Teks (Gelap tapi lembut di mata) */
+  --text-color: #1a2428;         
+  --text-muted: #64748b;        
 
- /* Warna Background & Elemen Kontainer */
- --bg-color: #ffffff;           
- --bg-navbar: #ffffff;          
- --bg-bottom-nav: #fff5ec;     
- 
- /* Tambahan: Warna Border & Bayangan */
- --border-color: #e2e8f0;       /* Abu-abu tipis untuk garis pembatas */
- --shadow-color: rgba(26, 36, 40, 0.06); /* Bayangan halus menggunakan basis warna teks gelapmu */
+  /* Warna Background & Elemen Kontainer */
+  --bg-color: #ffffff;           
+  --bg-navbar: #ffffff;          
+  --bg-bottom-nav: #fff5ec;     
+  
+  /* Tambahan: Warna Border & Bayangan */
+  --border-color: #e2e8f0;       /* Abu-abu tipis untuk garis pembatas */
+  --shadow-color: rgba(26, 36, 40, 0.06); /* Bayangan halus menggunakan basis warna teks gelapmu */
 }
 
 
 img{
- width: 100%;
+  width: 100%;
 }
 
 body{
- color: var(--text-color);
- height: 1000px;
+  color: var(--text-color);
+  height: 1000px;
 }
 
 header{
- background-color: var(--bg-color);
- position: fixed;
- width: 100%;
- top: 0;
- right: 0;
- z-index: 1000;
- display: flex;
- justify-content: space-between;
- align-items: center;
- box-shadow: 0 8px 15px rgb(14 5 54 / 20%);
- padding: 15px 20px;
- transition: 0.5s;
- border-radius: 0 0 20px 20px;
+  background-color: var(--bg-color);
+  position: fixed;
+  width: 100%;
+  top: 0;
+  right: 0;
+  z-index: 1000;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 8px 15px rgb(14 5 54 / 20%);
+  padding: 15px 20px;
+  transition: 0.5s;
+  border-radius: 0 0 20px 20px;
 
 }
 
 .left-navbar{
- display: flex;
- align-items: center;
- gap: 2px;
+  display: flex;
+  align-items: center;
+  gap: 2px;
 }
 
 .left-navbar a {
- color: var(--orange-color);
- font-size: medium;
- font-weight: bold;
- cursor: pointer;
+  color: var(--orange-color);
+  font-size: medium;
+  font-weight: bold;
+  cursor: pointer; 
 }
 
 .bx-broccoli{
- color: var(--green-color);
- font-size: 25px;
- cursor: pointer;
+  color: var(--green-color);
+  font-size: 25px;
+  cursor: pointer;
 }
 
 .center-navbar{
- display: flex;
- position: fixed;
- bottom: 10px;
- left: 0;
- width: 100%;
- height: 70px;
- background-color: var(--bg-color);
- box-shadow: 0 -4px 30px rgb(0 0 0 / 20%);
- justify-content: space-between;
- align-items: center;
- z-index: 1000;
- border-radius: 50px;
+  display: flex;
+  position: fixed;
+  bottom: 10px;
+  left: 0;
+  width: 100%;
+  height: 70px;
+  background-color: var(--bg-color);
+  box-shadow: 0 -4px 30px rgb(0 0 0 / 20%);
+  justify-content: space-between;
+  align-items: center;
+  z-index: 1000;
+  border-radius: 50px;
 }
 
 .center-navbar a{
- color: var(--text-color);
- display: flex;
- flex-direction: column;
- justify-content: center;
- align-items: center;
- width: 70px;
- height: 80px;
- padding: 0 20px;
- border-radius: 30px;
+  color: var(--text-color);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 70px;
+  height: 80px;
+  padding: 0 20px;
+  border-radius: 30px;
 }
 
 
 .center-navbar a i {
- font-size: 24px;
- margin-bottom: 5px;
+  font-size: 24px;
+  margin-bottom: 5px;
 }
 
 .center-navbar a:hover{
- background-color: var(--orange-color);
- color: var(--bg-navbar);
+  background-color: var(--orange-color);
+  color: var(--bg-navbar);
 }
 
 .center-navbar .Home-menu {
- font-weight: bold;
- color: var(--orange-color);
+  font-weight: bold;
+  color: var(--orange-color);
 }
 
 .center-navbar .Profile-menu a{
- border-radius:0 60px 60px 0;
+  border-radius:0 60px 60px 0;
 }
 
 .right-navbar{ 
- display: flex;
- justify-content: center;
+  display: flex;
+  justify-content: center;
 }
 
 .profile {
- display: flex;
- justify-content: center;
- align-items: center;
- gap: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
 }
 
 .profile-image{
- width: 30px;
- height: 30px;
- border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
 }
 
 .profile-name,
 .profile .bx-chevron-down{
- font-size: small;
- display: none;
+  font-size: small;
+  display: none;
 }
 
 
@@ -311,6 +311,101 @@ header{
 .btn-next {
   right: 10px;
 }
+
+/* Catagory-Section */
+.category-section{
+  flex-direction: row;
+  margin: 30px 20px;
+}
+
+.category-title{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex: 1;
+  justify-content: space-between;
+}
+
+.category-title h1 {
+  font-size: larger;
+  font-style: bold;
+}
+
+.category-title h3 {
+  font-size: medium;
+  color: var(--green-color);
+  justify-content: center;
+}
+
+.category-title .cta-buttons{
+  width: auto;
+  height: 40px;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+}
+
+.category-display{
+  height: 160px;
+  display: flex;
+  gap: 5px;
+  overflow-x: auto;
+  flex-direction: row;
+  align-items: center;
+  background-color: var(--bg-color);
+  -ms-overflow-style: none;  /* IE dan Edge */
+  scrollbar-width: none;  /* Firefox */
+}
+
+.category-display::-webkit-scrollbar{
+  display: none;
+}
+
+.category-display .category-card{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  flex: 0 0 100px;
+  height: 120px;
+  border-radius: 20px;
+}
+
+.category-display h4{
+  font-size: small;
+}
+
+.category-display p{
+  font-size: small;
+}
+
+.category-img{
+  width: 50px;
+  height: 50px;
+}
+
+/* 2. Beri warna background soft + BORDER TEGAS di tiap nomor */
+.category-display .category1 { 
+  background-color: #FFF3E0; 
+  border-color: #FFB74D; /* Garis orange tegas */
+} 
+.category-display .category2 { 
+  background-color: #E8F5E9; 
+  border-color: #81C784; /* Garis hijau tegas */
+} 
+.category-display .category3 { 
+  background-color: #FFF8E1; 
+  border-color: #FDBD41; /* Garis kuning tua */
+} 
+.category-display .category4 { 
+  background-color: #E0F2F1; 
+  border-color: #4DB6AC; /* Garis mint tua */
+} 
+.category-display .category5 { 
+  background-color: #FBE9E7; 
+  border-color: #FF8A65; /* Garis merah-orange */
+}
+
 @media screen and (min-width: 500px) {
   
   /* 1. Atur header sebagai container utama agar membagi ruang dengan adil */
