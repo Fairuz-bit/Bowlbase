@@ -105,9 +105,12 @@ header{
   border-radius: 30px;
 }
 
+.center-navbar a{
+  font-size: small;
+}
 
 .center-navbar a i {
-  font-size: 24px;
+  font-size: 18px;
   margin-bottom: 5px;
 }
 
@@ -120,10 +123,6 @@ header{
   font-weight: bold;
   color: var(--bg-color);
   background-color: var(--orange-color);
-}
-
-.center-navbar .Profile-menu a{
-  border-radius:0 60px 60px 0;
 }
 
 .right-navbar{ 
