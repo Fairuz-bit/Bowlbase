@@ -384,40 +384,93 @@ header{
   height: 50px;
 }
 
-/* 2. Beri warna background soft + BORDER TEGAS di tiap nomor */
-.category-display .category1 { 
-  background-color: #FFF3E0; 
-  border-color: #FFB74D; /* Garis orange tegas */
-} 
-.category-display .category2 { 
-  background-color: #E8F5E9; 
-  border-color: #81C784; /* Garis hijau tegas */
-} 
-.category-display .category3 { 
-  background-color: #FFF8E1; 
-  border-color: #FDBD41; /* Garis kuning tua */
-} 
-.category-display .category4 { 
-  background-color: #E0F2F1; 
-  border-color: #4DB6AC; /* Garis mint tua */
-} 
-.category-display .category5 { 
-  background-color: #FBE9E7; 
-  border-color: #FF8A65; /* Garis merah-orange */
+
+.category-display .category1 { background-color: #FFF3E0; } 
+.category-display .category2 { background-color: #E8F5E9; } 
+.category-display .category3 { background-color: #FFF8E1; } 
+.category-display .category4 { background-color: #E0F2F1; } 
+.category-display .category5 { background-color: #FBE9E7; }
+
+
+/* Product-Section */
+
+.prodcut-section{
+  height: 300px;
+  margin: 20px;
+  padding: 0 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
+
+.product-title{
+  margin: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.product-title-text h1{
+  font-size: large;
+}
+
+.product-katalog{
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(45%, 1fr));
+  gap: 15px;
+  padding: 10px;
+  background-color: var(--bg-color);
+}
+
+.product-katalog .katalog{
+  padding: 10px;
+  width: 100%;
+  border-radius: 15px;
+  box-shadow: 0 -4px 30px rgb(0 0 0 / 10%);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 40px;
+
+}
+.product-katalog .katalog-img{
+  width: 100px;
+  height: 50px;
+  padding: 10px;
+}
+
+.katalog .katalog-text{
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+
+.katalog-text p{
+  font-size: 12px;
+}
+
+.katalog-text h2{
+  font-size: small;
+  font-style: bold;
+}
+
+
 
 @media screen and (min-width: 500px) {
   
-  /* 1. Atur header sebagai container utama agar membagi ruang dengan adil */
+  /* Navbar */
   header {
     display: flex;
-    justify-content: space-between; /* Logo kiri, menu tengah, profil kanan */
+    justify-content: space-between; 
     align-items: center;
     padding: 15px 20px;
     gap: 10px;
   }
 
-  /* 2. Jinakkan menu tengah agar tidak serakah mengambil ruang */
+
   .center-navbar {
     position: static;
     width: auto;
@@ -427,21 +480,20 @@ header{
     border-radius: 0;
     display: flex;
     justify-content: center;
-    gap: 8px;                     /* Perkecil jarak antar menu agar menghemat tempat */
-    flex: 0 1 auto;               /* Kunci: menu tidak akan memaksa melebar */
-  }
+    gap: 8px;                    
+    flex: 0 1 auto;  
+  }             
 
-  /* 3. Perkecil sedikit ukuran text menu khusus di ukuran tanggung ini */
+
   .center-navbar a {
     flex-direction: row;
-    font-size: 13px;              /* Sedikit lebih kecil agar space aman */
+    font-size: 13px;             
     font-weight: 500;
-    padding: 6px 8px;             /* Padding dipersempit biar muat */
+    padding: 6px 8px;           
     width: auto;
     height: auto;
   }
 
-  /* Tetap sembunyikan ikon menu */
   .center-navbar a i {
     display: none;
   }
@@ -457,11 +509,10 @@ header{
     padding: 6px 16px;
   }
 
-  /* 4. Amankan posisi profile di kanan */
   .right-navbar {
     display: flex;
     justify-content: flex-end;
-    flex: 0 0 auto;               /* Kunci: profil gak bakal ketendang keluar layar */
+    flex: 0 0 auto;               
   }
 
   .profile {
@@ -470,12 +521,11 @@ header{
     gap: 6px;
   }
 
-  /* MUNCULKAN KEMBALI NAMA PROFIL */
   .profile-name,
   .profile .bx-chevron-down {
     display: inline-block;        
-    font-size: 12px;              /* Ukuran pas untuk layar 540px */
-    white-space: nowrap;          /* Paksa nama agar tidak patah jadi 2 baris */
+    font-size: 12px;            
+    white-space: nowrap;          
   }
 
   .profile-image {
@@ -483,6 +533,7 @@ header{
     height: 28px;
   }
 
+  /* Category-Section */
   .category-display{
     display: flex;
     justify-content:  space-evenly;
@@ -513,11 +564,24 @@ header{
     width: 60px;
     height: 60px;
   }
+
+  /* Product_Section */
+  .product-katalog{
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+    margin: 15px;
+  }
+
+  .product-title{
+    margin: 0 20px;
+  }
 }
 
 
 /* Desktop styles for hero and navigation */
 @media screen and (min-width: 768px) {
+  
+  /* Navbar */
   header{
     position: fixed;
     z-index: 999;
@@ -576,7 +640,6 @@ header{
 
 
   /* Category-Section */
-
   .category-section{
     height: 350px;
     margin: 25px 30px;
@@ -614,5 +677,30 @@ header{
   .category-card .category-img{
     width: 90px;
     height: 90px;
+  }
+
+  
+  /* Product_Section */
+  .product-katalog{
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    margin: 30px;
+  }
+
+  .product-title{
+    margin: 0 60px;
+  }
+
+  .product-title-text h1{
+  font-size: xx-large;
+  }
+}
+
+@media screen and (min-width:1200px){
+
+  /* Product_Section */
+  .product-katalog{
+    grid-template-columns: repeat(5, 1fr);
+    gap: 20px;
   }
 }
